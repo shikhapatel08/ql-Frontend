@@ -1,0 +1,132 @@
+.comment-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.comment-content-col {
+    background: linear-gradient(145deg, #000000, #111);
+    padding: 14px 16px 10px 16px;
+    border-radius: 16px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.766);
+}
+
+.comment-avatar-col {
+    width: 44px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.comment-card {
+    background: linear-gradient(145deg, #000000, #111);
+    padding: 14px 16px 10px 16px;
+    border-radius: 16px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.comment-header {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 6px;
+    gap: 10px;
+}
+
+.comment-username {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.comment-time {
+    font-size: 12px;
+    color: #9aa0a6;
+}
+
+.comment-text {
+    font-size: 15px;
+    color: #e6e6e6;
+    line-height: 1.5;
+}
+
+.comment-actions {
+    display: flex;
+    gap: 18px;
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    opacity: 0.9;
+}
+
+/* Replies */
+.reply-item {
+    margin-left: 52px;
+}
+
+.reply-item .profile-img {
+    width: 32px;
+    height: 32px;
+}
+
+.reply-item::before {
+    content: "";
+    position: absolute;
+    left: -26px;
+    top: -8px;
+    bottom: 8px;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 2px;
+}
+
+/* ===== COMMENT WRAPPER ===== */
+.comment-item {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+/* ===== LEVEL SPACING ===== */
+.level-0 { margin-left: 0; }
+.level-1 { margin-left: 42px; }
+.level-2 { margin-left: 84px; }
+.level-3 { margin-left: 126px; }
+
+/* ===== THREAD LINE ===== */
+.level-1::before,
+.level-2::before,
+.level-3::before {
+
+  content: "";
+  position: absolute;
+  left: -22px;
+  top: 8px;
+  bottom: -8px;
+  width: 2px;
+  background: linear-gradient(to bottom, #2f2f2f, #3a3a3a);
+  border-radius: 4px;
+  opacity: 0.6;
+}
+
+/* ===== CONNECTOR DOT ===== */
+.level-1::after,
+.level-2::after,
+.level-3::after {
+    display: none;
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 18px;
+  width: 8px;
+  height: 8px;
+  background: #3a3a3a;
+  border-radius: 50%;
+}
+
+

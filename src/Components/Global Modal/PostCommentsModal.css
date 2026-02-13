@@ -1,0 +1,384 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.post-comments-layout {
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh; /* modal fits screen */
+  background: inherit;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.post-side {
+  flex: 1;
+  background-color: inherit;
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  color: inherit;
+  overflow-y: auto; 
+}
+
+.placeholder-post {
+  text-align: start;
+  font-size: 18px;
+}
+
+.left {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+
+.left img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.comments-side {
+  flex: 1.2;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: inherit;
+  position: relative;
+}
+
+.comments-body {
+  flex: 1; /* fills remaining space */
+  overflow-y: auto; /* scrollable comments */
+  padding-right: 4px; /* avoid scrollbar overlapping */
+}
+
+.comments-body p {
+  margin: 4px 0;
+}
+
+.no-comments {
+  text-align: center;
+  padding: 40px 20px;
+  color: inherit;
+}
+
+.no-comments h4 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.no-comments p {
+  font-size: 14px;
+}
+
+.comment-item {
+  background: #1f1f1f;
+  color: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.comment-username {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.comment-image-wrapper {
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.comment-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.comment-text {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.comment-text-empty {
+  font-style: italic;
+  color: #aaa;
+}
+
+.comment-actions {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: #ccc;
+  align-items: center;
+}
+
+.comment-input {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  flex-shrink: 0; /* input stays at bottom */
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.comment-input input {
+  flex: 1;
+  padding: 14px 18px;
+  border: 1px solid #d1d5db;
+  border-radius: 24px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.comment-input input:focus {
+  border-color: #3b82f6;
+}
+
+.comment-input button {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: #1d9bf0;
+  color: inherit;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.comment-input button:hover {
+  background: #1a8cd8;
+}
+
+/* Post image styling */
+.post-image {
+  background: inherit;
+  border-radius: 14px;
+  padding: 12px;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  width: 250px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-image:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.post-img-a {
+  width: 100%;
+  max-height: 255px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.post-image p {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.post-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.post-author {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f0f0f;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.verified {
+  color: #1d9bf0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.post-text {
+  font-size: 16px;
+  line-height: 1.45;
+  color: inherit;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  word-break: break-word;
+}
+
+.image {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: -3px;
+  right: -9px;
+  background-color: transparent;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+.replies {
+  margin-top: 8px;
+  margin-left: 20px;
+  border-left: 2px solid #e1e8ed;
+  padding-left: 12px;
+}
+
+.reply-item {
+  background: inherit;
+  border-radius: 8px;
+  margin: 6px 0;
+  padding: 8px;
+}
+
+.back-button {
+  background: inherit;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.back-button:hover {
+  background: inherit;
+}
+
+.comments-body {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.comment-item {
+  margin-bottom: 12px;
+}
+
+/* PostCommentsModal.css */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.post-comments-layout {
+  background-color: #fff;
+  width: 800px;
+  max-height: 90vh;
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.post-side {
+  width: 40%;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.comments-side {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.comments-body {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-bottom: 60px; /* space for input */
+}
+
+.comment-item {
+  margin-bottom: 12px;
+  padding: 6px;
+  border-radius: 8px;
+  background-color: inherit;
+}
+
+.reply-item {
+  margin-left: 20px;
+  background-color: inherit;
+}
+
+
+
+.replies-page .back-btn {
+  background-color: transparent;
+  border: none;
+  color: #1d9bf0;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  text-align: start;
+}

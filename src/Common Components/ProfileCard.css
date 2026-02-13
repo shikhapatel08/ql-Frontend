@@ -1,0 +1,192 @@
+.profile-page {
+    min-height: 100px;
+    min-width: 400px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    position: relative;
+    left: 135px;
+    top: 35px;
+    overflow-x: hidden;
+}
+
+
+.profile-banner {
+    height: 300px;
+    width: 1200px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.profile-banner img {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.profile-header {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px 20px 40px;
+    min-height: 80px;
+    gap: 20px;
+}
+
+.back-btn {
+    position: absolute;
+    top: -50px;
+    left: 30px;
+    background: transparent;
+    color: inherit;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    /* Bigger button */
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s;
+    z-index: 10;
+}
+
+.back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn svg {
+    width: 24px;
+    /* Bigger SVG */
+    height: 24px;
+    stroke: #667eea;
+}
+
+.profile-avatar {
+    width: 160px;
+    /* Bigger avatar */
+    height: 160px;
+    border-radius: 50%;
+    border: 5px solid white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.profile-info {
+    padding: 50px 48px 48px;
+    /* More padding for larger size */
+    text-align: center;
+}
+
+.profile-info h2 {
+    font-size: 36px;
+    /* Bigger text */
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: inherit;
+}
+
+.username {
+    font-size: 20px;
+    /* Bigger username */
+    color: inherit;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.bio {
+    font-size: 18px;
+    /* Bigger bio */
+    color: inherit;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 32px;
+    padding: 24px 0;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stats span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    /* Bigger stats text */
+    flex: 1;
+}
+
+.stats b {
+    font-size: 28px;
+    /* Bigger numbers */
+    font-weight: 700;
+    color: inherit;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.meta {
+    display: flex;
+    flex-direction: row;
+    /* Horizontal layout for larger screen */
+    justify-content: center;
+    gap: 24px;
+    font-size: 16px;
+    color: inherit;
+    flex-wrap: wrap;
+}
+
+.meta span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ProfileCard.css ma aa add karo - posts section mate */
+
+.posts-section {
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid #e5e7eb;
+    max-width: 800px;
+    /* Center width limit */
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.posts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+}

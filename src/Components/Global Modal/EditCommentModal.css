@@ -1,0 +1,14 @@
+textarea {
+  min-height: 120px;
+  width: 500px;
+  resize: none;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #1e1e1e;
+  color: white;
+}
+
+.ecm-cancel{
+    margin-right: 10px;
+}

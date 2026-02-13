@@ -1,0 +1,287 @@
+.create-post-container {
+    background: #eee;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #e0e0e0;
+
+    /* width: 100%; */
+    min-width: 500px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.create-post-back {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.create-post-back h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+}
+
+.create-post-tabs {
+    display: flex;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 4px;
+    margin-bottom: 32px;
+    backdrop-filter: blur(10px);
+}
+
+.create-post-tab {
+    flex: 1;
+    text-align: center;
+    padding: 16px 24px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 12px;
+    color: inherit;
+}
+
+.create-post-tab-main {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+    transform: translateY(-2px);
+}
+
+.create-post-tab a {
+    color: inherit;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+}
+
+.create-post-tab-main a {
+    color: inherit !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.create-post-tab span {
+    color: inherit;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.create-post-tab-main span {
+    color: inherit !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.create-post-textarea {
+    width: 600px;
+    height: 180px;
+    padding: 20px 24px;
+    border: 2px solid #e2e8f0;
+    border-radius: 20px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.7;
+    background: linear-gradient(145deg, #ffffff 0%, #fafbff 100%);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.create-post-counter {
+    text-align: right;
+    font-size: 14px;
+    color: #9ca3af;
+    font-weight: 600;
+    margin-bottom: 28px;
+    margin-right: 20px; 
+}
+
+.create-post {
+    position: relative;
+}
+
+.create-post-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 32px;
+    font-size: 16px;
+    color: #64748b; 
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.create-post-upload::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: left 0.5s;
+}
+
+.create-post-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 40px !important;
+    padding-top: 32px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.create-post-cancel {
+    flex: 1;
+    max-width: 160px;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.create-post-cancel:hover {
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.create-post-publish {
+    flex: 1;
+    max-width: 160px;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    border: none;
+    border-radius: 16px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+}
+
+.create-post-publish:hover {
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.5);
+}
+
+.create-post-label {
+    font-weight: 700;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.create-post-select {
+    width: 100%;
+    padding: 16px 20px 16px 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 16px;
+    background: #fff;
+    color: inherit;
+    cursor: pointer;
+}
+
+.create-post-select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+}
+
+.create-post-input {
+    width: 600px; 
+    padding: 20px 24px;
+    border: 2px solid #e2e8f0;
+    border-radius: 20px;
+    font-size: 16px;
+    line-height: 1.7;
+    background: linear-gradient(145deg, #ffffff 0%, #fafbff 100%);
+    margin-bottom: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.preview {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background-color: inherit;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+}
+
+.preview img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.preview img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.preview-remove {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+}
+
+.preview-remove:hover {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.5);
+}
+
+.preview-remove:active {
+    transform: scale(0.95);
+}
+
+.create-post-textarea,
+.create-post-input {
+    width: 100%;
+    max-width: 750px;
+    box-sizing: border-box; /* padding ne width ma include kare */
+}
